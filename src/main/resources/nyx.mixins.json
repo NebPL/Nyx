@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "neb.nyx.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MinecraftClientMixin",
+    "GameRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  },
+  "client": [
+  ]
+}
