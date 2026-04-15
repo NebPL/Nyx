@@ -1,4 +1,4 @@
-package neb.nyx.gui.ClickGUI;
+package neb.nyx.gui.util.widget;
 import neb.nyx.modules.Module;
 
 public class ModuleWidget {

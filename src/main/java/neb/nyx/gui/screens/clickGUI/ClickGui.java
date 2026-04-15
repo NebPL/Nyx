@@ -1,7 +1,9 @@
-package neb.nyx.gui.ClickGUI;
+package neb.nyx.gui.screens.clickGUI;
 
-import com.mojang.authlib.minecraft.client.MinecraftClient;
 import neb.nyx.Nyx;
+import neb.nyx.gui.util.renderUtil.DrawUtil;
+import neb.nyx.gui.util.widget.CategoryWidget;
+import neb.nyx.gui.util.widget.ModuleWidget;
 import neb.nyx.modules.Category;
 import neb.nyx.modules.Categorys;
 import net.minecraft.client.gui.GuiGraphics;

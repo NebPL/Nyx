@@ -1,4 +1,4 @@
-package neb.nyx.gui.ClickGUI;
+package neb.nyx.gui.util.renderUtil;
 
 
 import net.minecraft.client.gui.GuiGraphics;

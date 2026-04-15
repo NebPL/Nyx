@@ -5,13 +5,11 @@ import com.mojang.blaze3d.platform.InputConstants;
 import neb.nyx.Nyx;
 import neb.nyx.event.EventHandler;
 import neb.nyx.event.world.TickEvent;
-import neb.nyx.gui.ClickGUI.ClickGui;
+import neb.nyx.gui.screens.clickGUI.ClickGui;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.resources.Identifier;
 import org.lwjgl.glfw.GLFW;
-
-import javax.swing.text.JTextComponent;
 
 public class KeyBindingManager {
 

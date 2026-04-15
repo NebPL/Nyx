@@ -13,9 +13,7 @@ import neb.nyx.event.render.RenderCloseEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MappableRingBuffer;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.client.renderer.rendertype.RenderType;
-import net.minecraft.core.BlockPos;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import org.joml.Matrix4f;
@@ -44,14 +42,11 @@ public class RenderUtil {
         return INSTANCE;
     }
 
-
-
     private static final Vector4f COLOR_MODULATOR = new Vector4f(1f, 1f, 1f, 1f);
     private static final Vector3f MODEL_OFFSET = new Vector3f();
     private static final Matrix4f TEXTURE_MATRIX = new Matrix4f();
 
     private static final ByteBufferBuilder allocator = new ByteBufferBuilder(RenderType.BIG_BUFFER_SIZE);
-//	private BufferBuilder buffer;
     private static MappableRingBuffer vertexBuffer;
 
     public static MultiBufferSource.BufferSource getVCP(){
@@ -66,7 +61,7 @@ public class RenderUtil {
 		matrices.translate(-camera.x, -camera.y, -camera.z);
 
 
-        RenderPipeline pipeline = pipeLine.LINES_THROUGH_WALLS;
+        RenderPipeline pipeline = PipeLine.LINES_THROUGH_WALLS;
 
         BufferBuilder buffer = new BufferBuilder(allocator,pipeline.getVertexFormatMode(),pipeline.getVertexFormat());
 
@@ -87,7 +82,7 @@ public class RenderUtil {
 		matrices.translate(-camera.x, -camera.y, -camera.z);
 
 
-        RenderPipeline pipeline = pipeLine.LINES_THROUGH_WALLS;
+        RenderPipeline pipeline = PipeLine.LINES_THROUGH_WALLS;
 
         BufferBuilder buffer = new BufferBuilder(allocator,pipeline.getVertexFormatMode(),pipeline.getVertexFormat());
 
@@ -150,7 +145,7 @@ public class RenderUtil {
 		matrices.translate(-camera.x, -camera.y, -camera.z);
 
 
-        RenderPipeline pipeline = pipeLine.FILLED_THROUGH_WALLS;
+        RenderPipeline pipeline = PipeLine.FILLED_THROUGH_WALLS;
 
         BufferBuilder buffer = new BufferBuilder(allocator,pipeline.getVertexFormatMode(),pipeline.getVertexFormat());
 
